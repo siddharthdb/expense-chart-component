@@ -1,0 +1,132 @@
+@import './variables.less';
+
+html,body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  
+  background: @cream-bg;
+  font-family: DMSans;
+  font-size: 62.5%; // 1rem  = 10px; 
+  font-style: normal;
+  line-height: normal;
+}
+
+
+@cmp-name: ~"expense";
+
+.@{cmp-name} {
+  &__summary {
+    width: 540px;
+    border-radius: 20px;
+    background: @red;
+    padding: 25px 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-balance {
+      display: flex;
+      flex-direction: column;
+      color: @white;
+
+      > .label {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      > .balance {
+        font-size: 3.2rem;
+        font-weight: 700;
+      }
+    }   
+
+    &-logo {
+      width: 72px;
+      height: 48px;
+      margin-top: 6px;
+    }
+  }
+
+  &__chart {
+    padding: 32px 40px;
+    border-radius: 20px;
+    background: @card-white;
+    margin-top: 24px;
+
+    &-title {
+      color: @dark-brown;
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    &-img {
+      margin: 32px 0;
+
+      text.txtlbl {
+        border-radius: 5px;
+        padding: 8px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: @white;
+        background: @dark-brown;
+      }
+
+      .tick line {
+        visibility:hidden;
+      }
+    }
+
+    > hr {
+      height: 1px;
+      background: @cream-bg;
+      border: none;
+    }
+
+    &-current {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-total {
+        display: flex;
+        flex-direction: column;
+
+        > .label {
+          font-size: 1.8rem;
+          font-weight: 400;
+          color: @medium-brown;
+        }
+
+        > .balance {
+          font-size: 4.8rem;
+          font-weight: 700;
+        }
+      }
+
+      &-chg {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+
+        > .value {
+          color: @dark-brown;
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+
+        > .label {
+          color: @medium-brown;
+          font-size: 1.8rem;
+          font-weight: 400; 
+        }
+      }
+    }
+  }
+}
