@@ -1,7 +1,38 @@
 import "./styles/index.less";
 import { max } from "lodash";
 import * as d3 from "d3";
-import data from "./data.json";
+// import data from "./data.json";
+
+const data = [
+  {
+    "day": "mon",
+    "amount": 17.45
+  },
+  {
+    "day": "tue",
+    "amount": 34.91
+  },
+  {
+    "day": "wed",
+    "amount": 52.36
+  },
+  {
+    "day": "thu",
+    "amount": 31.07
+  },
+  {
+    "day": "fri",
+    "amount": 23.39
+  },
+  {
+    "day": "sat",
+    "amount": 43.28
+  },
+  {
+    "day": "sun",
+    "amount": 25.48
+  }
+]
 
 function ExpenseChart() {
 
