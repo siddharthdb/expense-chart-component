@@ -19,14 +19,24 @@ html,body {
 @cmp-name: ~"expense";
 
 .@{cmp-name} {
-  &__summary {
+  &__container {
     width: 540px;
+    @media (max-width: 576px)  {
+      width: 343px;
+    }
+  }
+
+  &__summary {
+    
     border-radius: 20px;
     background: @red;
     padding: 25px 32px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media (max-width: 576px)  {
+      padding: 20px;
+    }
 
     &-balance {
       display: flex;
@@ -57,11 +67,19 @@ html,body {
     background: @card-white;
     margin-top: 24px;
 
+    @media (max-width: 576px)  {
+      padding: 24px 20px;
+    }
+
     &-title {
       color: @dark-brown;
       font-size: 3.2rem;
       font-weight: 700;
       margin: 0;
+
+      @media (max-width: 576px)  {
+        font-size: 2.4rem;
+      }
     }
 
     &-img {
@@ -74,6 +92,10 @@ html,body {
         font-weight: 700;
         color: @white;
         background: @dark-brown;
+
+        @media (max-width: 576px)  {
+          font-size: 1.2rem;
+        }
       }
 
       .tick line {
@@ -101,11 +123,19 @@ html,body {
           font-size: 1.8rem;
           font-weight: 400;
           color: @medium-brown;
+
+          @media (max-width: 576px)  {
+            font-size: 1.5rem;
+          }
         }
 
         > .balance {
           font-size: 4.8rem;
           font-weight: 700;
+
+          @media (max-width: 576px)  {
+            font-size: 3.0rem;
+          }
         }
       }
 
@@ -114,16 +144,19 @@ html,body {
         flex-direction: column;
         align-items: end;
         justify-content: end;
+        font-size: 1.8rem;
+
+        @media (max-width: 576px)  {
+          font-size: 1.5rem;
+        }
 
         > .value {
-          color: @dark-brown;
-          font-size: 1.8rem;
+          color: @dark-brown;          
           font-weight: 700;
         }
 
         > .label {
           color: @medium-brown;
-          font-size: 1.8rem;
           font-weight: 400; 
         }
       }

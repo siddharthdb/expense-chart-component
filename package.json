@@ -2,15 +2,16 @@
   "name": "expenses-chart-component-main",
   "version": "1.0.0",
   "description": "![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "parcel index.html",
+    "build": "npx parcel build index.html"
   },
   "author": "Siddharth Bhawalkar",
   "license": "ISC",
   "dependencies": {
     "d3": "^7.8.5",
-    "less": "^4.2.0"
+    "less": "^4.2.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@parcel/transformer-less": "^2.9.3",
